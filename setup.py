@@ -19,6 +19,11 @@ def read_version():
             raise RuntimeError('Cannot find version in mailgun-validator/__init__.py')
 
 
+install_requires = [
+    'requests>=2.18.4'
+]
+
+
 setup(name='mailgun-validator',
       version=read_version(),
       description='Python wrapper for Mailgun email validation API',
@@ -27,6 +32,7 @@ setup(name='mailgun-validator',
       author_email='troflyaninvv@gmail.com',
       url='',
       packages=['mailgun-validator'],
-      install_requires=[],
+      python_requires='>=3.5.3',
+      install_requires=install_requires,
       dependency_links=[],
       include_package_data=True)
